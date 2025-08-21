@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Typed from "typed.js";
 import ConfettiGenerator from "confetti-js";
 import NavBar from "../components/NavBar";
@@ -9,6 +9,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   const typed = useRef<null | Typed>(null);
+  const [stats, setStats] = useState<any>(null);
 
   useEffect(() => {
     const options = {
@@ -21,6 +22,11 @@ const Home: NextPage = () => {
       backSpeed: 75,
     };
 
+    fetch("/api/stats")
+      .then((res) => res.json())
+      .then((data) => setStats(data))
+      .catch((err) => console.error(err));
+    
     // #typing-element refers to the <code> rendered below
     typed.current = new Typed("#typing-element", options);
 
@@ -28,6 +34,8 @@ const Home: NextPage = () => {
       // Destroy Typed instance during cleanup to prevent memory leaks
       typed.current?.destroy();
     };
+
+    
   }, []);
 
   useEffect(() => {
