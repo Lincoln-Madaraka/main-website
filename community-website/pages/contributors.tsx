@@ -93,6 +93,25 @@ const Contributors: NextPage = () => {
                 </td>
                 <td align="center" className={styles.tableData}>
                   <a
+                    href="https://github.com/Lincoln Madaraka"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://avatars.githubusercontent.com/u/117019629?s=400&u=e1d30f065eda4e45927f46da4eaaac73f9e68a90&v=4"
+                      width="85"
+                      height="85"
+                      alt="King Coder"
+                      className={styles.profileImage}
+                    />
+                    <br />
+                    <sub>
+                      <b>Lincoln</b>
+                    </sub>
+                  </a>
+                </td>
+                <td align="center" className={styles.tableData}>
+                  <a
                     href="https://github.com/theadityaagnihotri"
                     target="_blank"
                     rel="noopener noreferrer"
