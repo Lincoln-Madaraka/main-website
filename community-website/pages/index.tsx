@@ -131,7 +131,24 @@ const Home: NextPage = () => {
               <p>Join our wonderful & growing community of 300+ people 💖</p>
             </a>
           </Link>
+          {stats && (
+            <section className="my-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className={styles.card}>
+                <h2>Total Members</h2>
+                <p>{stats.members}</p>
+              </div>
+              <div className={styles.card}>
+                <h2>Contributors</h2>
+                <p>{stats.contributors}</p>
+              </div>
+              <div className={styles.card}>
+                <h2>Forks</h2>
+                <p>{stats.forks}</p>
+              </div>
+            </section>
+          )}
         </div>
+
       </main>
 
       <footer className={`${styles.footer} text-black dark:text-white`}>
