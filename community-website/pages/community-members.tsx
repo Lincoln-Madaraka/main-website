@@ -93,6 +93,25 @@ const CommunityMembers: NextPage = () => {
                 </td>
                 <td align="center">
                   <a
+                    href="https://github.com/Lincoln-Madaraka"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://avatars.githubusercontent.com/u/117019629?s=400&u=e1d30f065eda4e45927f46da4eaaac73f9e68a90&v=4"
+                      width="85"
+                      height="85"
+                      className={styles.profileImage}
+                      alt="King Coder"
+                    />
+                    <br />
+                    <sub>
+                      <b>Lincoln Madaraka</b>
+                    </sub>
+                  </a>
+                </td>
+                <td align="center">
+                  <a
                     href="https://github.com/3ba2ii"
                     target="_blank"
                     rel="noopener noreferrer"
